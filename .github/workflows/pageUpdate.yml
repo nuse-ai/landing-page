@@ -21,10 +21,10 @@ jobs:
       uses: fifsky/ssh-action@master
       with:
         command: |
-          cd ~/website
+          cd ~/PW
           git pull
           npm install
-          npm run build
+          npm run start
         host: ${{ secrets.SSH_HOST }}
         user: ${{ secrets.SSH_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
