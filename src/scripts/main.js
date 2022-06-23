@@ -1,5 +1,3 @@
-// Get all utils
-import * as exports from './utils';
 // ANIMEJS
 import anime from 'animejs/lib/anime.es.js';
 // Smooth scrollbar
@@ -10,34 +8,6 @@ Scrollbar.init(document.querySelector('html'), {
   renderByPixels: true,
   continuousScrolling: true,
 });
-
-Object.entries(exports).forEach(([name, exported]) => window[name] = exported);
-const $ = (selector) => document.querySelector(selector);
-
-getOctaneCommit().then(res => {
-  let ele = $("#octane-commit");
-  ele.innerHTML = getHash(res);
-  insertDate(ele, getDate(res));
-})
-
-getRTomlCommit().then(res => {
-  let ele = $("#rtoml-commit");
-  ele.innerHTML = getHash(res);
-  insertDate(ele, getDate(res));
-})
-
-getCoChatCommit().then(res => {
-  let ele = $("#cochat-commit");
-  ele.innerHTML = getHash(res);
-  insertDate(ele, getDate(res));
-})
-
-
-getSanitizerCommit().then(res => {
-  let ele = $("#sanitizer-commit");
-  ele.innerHTML = getHash(res);
-  insertDate(ele, getDate(res));
-})
 
 anime({
   targets: '.equals',
