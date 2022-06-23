@@ -24,7 +24,6 @@ jobs:
           cd ~/PW
           git pull
           npm install
-          pm2 stop server
           npm run start
         host: ${{ secrets.SSH_HOST }}
         user: ${{ secrets.SSH_USER }}
