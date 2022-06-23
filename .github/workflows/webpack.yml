@@ -1,0 +1,30 @@
+name: NodeJS with Webpack
+
+on:
+  push:
+    branches: [ "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: ci pipeline
+      uses: fifsky/ssh-action@master
+      with:
+        command: |
+          cd ~/website
+          git pull
+          npm install
+          npm run build
+        host: ${{ secrets.SSH_HOST }}
+        user: ${{ secrets.SSH_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
