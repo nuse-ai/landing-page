@@ -1,10 +1,28 @@
 @import 'reset.scss';
 @import 'colors.scss';
 
-.wrapper {
-  padding-left: 5vw;
-  padding-right: 5vw;
+body {
   background: $background-color;
+}
+
+.container-lg {
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+  background: $background-color;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container-lg {
+    max-width: 1500px;
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+  .container-lg {
+    max-width: 1600px;
+  }
 }
 
 $grid-bp: 940px;
@@ -142,7 +160,7 @@ main {
 
     .card {
       height: 100%;
-      padding: 2vw;
+      padding: 25px;
       display: flex;
       align-items: center;
       border-radius: 20px;

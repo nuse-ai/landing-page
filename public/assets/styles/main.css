@@ -74,12 +74,28 @@ a {
   color: #A3BE8C;
 }
 
-.wrapper {
-  padding-left: 5vw;
-  padding-right: 5vw;
+body {
   background: #2E3440;
 }
 
+.container-lg {
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+  background: #2E3440;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container-lg {
+    max-width: 1500px;
+  }
+}
+@media only screen and (min-width: 1800px) {
+  .container-lg {
+    max-width: 1600px;
+  }
+}
 header {
   position: absolute;
   width: 100%;
@@ -255,7 +271,7 @@ main .second-page .projects .sanitizer .card .underline:after {
 }
 main .second-page .card {
   height: 100%;
-  padding: 2vw;
+  padding: 25px;
   display: flex;
   align-items: center;
   border-radius: 20px;
