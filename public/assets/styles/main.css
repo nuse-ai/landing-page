@@ -74,7 +74,7 @@ a {
   color: #A3BE8C;
 }
 
-body {
+.bg {
   background: #2E3440;
 }
 
@@ -83,19 +83,18 @@ body {
   padding-right: 1rem;
   padding-left: 1rem;
   width: 100%;
-  background: #2E3440;
 }
-
-@media only screen and (min-width: 1200px) {
+@media (max-width: 1200px) {
   .container-lg {
     max-width: 1500px;
   }
 }
-@media only screen and (min-width: 1800px) {
+@media (max-width: 1800px) {
   .container-lg {
     max-width: 1600px;
   }
 }
+
 header {
   position: absolute;
   width: 100%;
@@ -140,7 +139,6 @@ header:after {
 footer {
   background: #4C566A;
   padding: 50px;
-  padding-left: 5vw;
 }
 
 .commit-details {

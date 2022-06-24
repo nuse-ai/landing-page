@@ -1,7 +1,7 @@
 @import 'reset.scss';
 @import 'colors.scss';
 
-body {
+.bg {
   background: $background-color;
 }
 
@@ -10,20 +10,17 @@ body {
   padding-right: 1rem;
   padding-left: 1rem;
   width: 100%;
-  background: $background-color;
-}
 
-@media only screen and (min-width: 1200px) {
-  .container-lg {
+  @include media-query-min-width(1200px) {
     max-width: 1500px;
   }
-}
 
-@media only screen and (min-width: 1800px) {
-  .container-lg {
+  @include media-query-min-width(1800px) {
     max-width: 1600px;
   }
 }
+
+
 
 $grid-bp: 940px;
 $main-text-bp: 600px;
