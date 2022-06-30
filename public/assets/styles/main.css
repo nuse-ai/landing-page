@@ -84,12 +84,12 @@ a {
   padding-left: 1rem;
   width: 100%;
 }
-@media (max-width: 1200px) {
+@media (min-width: 1200px) {
   .container-lg {
     max-width: 1500px;
   }
 }
-@media (max-width: 1800px) {
+@media (min-width: 1800px) {
   .container-lg {
     max-width: 1600px;
   }

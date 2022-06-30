@@ -47,5 +47,5 @@ a {
 }
 
 @mixin media-query-min-width($size) {
-  @media (max-width: $size) { @content; }
+  @media (min-width: $size) { @content; }
 }
