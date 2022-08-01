@@ -11,20 +11,17 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-    
+
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: ci pipeline
-      uses: fifsky/ssh-action@master
-      with:
-        command: |
-          cd ~/PW
-          git reset --hard HEAD
-          git pull
+      - name: Checkout 🛎️
+        uses: actions/checkout@v3
+
+      - name: Install and Build
+        run: |
           npm install
-          pm2 stop server
           npm run start
-        host: ${{ secrets.SSH_HOST }}
-        user: ${{ secrets.SSH_USER }}
-        key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          folder: public # The folder the action should deploy.

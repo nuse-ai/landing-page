@@ -10,7 +10,7 @@
     "dev:start": "live-server --open=./public/ --host=192.168.29.194 --watch=./public/",
     "dev": "npm-run-all -p dev:*",
     "build": "cross-env NODE_ENV=production webpack",
-    "start": "npm run build && pm2 start server.js"
+    "start": "npm run build"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",
