@@ -1,13 +1,5 @@
 // ANIMEJS
 import anime from 'animejs/lib/anime.es.js';
-// Smooth scrollbar
-import Scrollbar from 'smooth-scrollbar';
-
-Scrollbar.init(document.querySelector('html'), {
-  damping: 0.1,
-  renderByPixels: true,
-  continuousScrolling: true,
-});
 
 anime({
   targets: '.equals',

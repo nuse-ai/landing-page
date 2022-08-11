@@ -14,9 +14,12 @@ header {
 
 	.center-part {
 		text-align: center;
+
 		@include media-query($bp-1) {
 			grid-column: 3;
+			text-align: right;
 		}
+
 		p {
 			left: 0;
 			right: 0;
