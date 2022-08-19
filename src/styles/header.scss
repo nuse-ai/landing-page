@@ -12,6 +12,16 @@ header {
 		margin: 0 auto;
 	}
 
+	.right-part {
+		text-align: right;
+		grid-column: 3;
+
+		p {
+			left: 0;
+			right: 0;
+		}
+	}
+
 	.center-part {
 		text-align: center;
 
@@ -26,12 +36,13 @@ header {
 		}
 	}
 
-	.center-part, .left-part {
+	.center-part, .left-part, .right-part {
 		position: relative;
+
 		p {
 			white-space: nowrap;
-			position: absolute;
-			bottom: 0;
+			position: relative;
+			top: 30px;
 
 			@include media-query($bp-1) {
 				font-size: 10px;
