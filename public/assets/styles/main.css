@@ -106,14 +106,6 @@ header .parent {
   grid-template-columns: repeat(3, 1fr);
   margin: 0 auto;
 }
-header .right-part {
-  text-align: right;
-  grid-column: 3;
-}
-header .right-part p {
-  left: 0;
-  right: 0;
-}
 header .center-part {
   text-align: center;
 }
@@ -127,18 +119,23 @@ header .center-part p {
   left: 0;
   right: 0;
 }
-header .center-part, header .left-part, header .right-part {
-  position: relative;
-}
 header .center-part p, header .left-part p, header .right-part p {
+  display: inline;
   white-space: nowrap;
   position: relative;
-  top: 30px;
+  top: 60px;
 }
 @media (max-width: 700px) {
   header .center-part p, header .left-part p, header .right-part p {
     font-size: 10px;
   }
+}
+header .right-part {
+  text-align: right;
+  grid-column: 3;
+}
+header .right-part p {
+  margin-right: 20px;
 }
 header:after {
   flex: 1;
