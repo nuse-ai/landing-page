@@ -33,6 +33,10 @@ $main-text-bp: 600px;
   @include font-size(1rem);
 }
 
+p {
+  font-weight: lighter;
+}
+
 .main-text {
   white-space: nowrap;
 
@@ -44,6 +48,7 @@ $main-text-bp: 600px;
 
   @include media-query($main-text-bp) {
     @include font-size(3rem);
+    margin-top: 30%;
   }
 
   font-weight: 900;

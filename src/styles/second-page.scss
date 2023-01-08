@@ -38,7 +38,7 @@
       grid-row: 2 / 3;
       grid-column: 1 / 1;
 
-      background: $color-6;
+      background: $color-2;
 
       @include media-query($grid-bp) {
         grid-row: 2;
@@ -68,7 +68,7 @@
       grid-column: 3 / 3;
 
       .card {
-        background: $color-5;
+        background: $color-4;
         color: black;
       }
 
@@ -151,6 +151,10 @@
 
     @include media-query($grid-bp) {
       padding: 20px;
+    }
+
+    @include media-query($main-text-bp) {
+      padding: 15px;
     }
 
     h1 {

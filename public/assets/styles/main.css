@@ -98,7 +98,6 @@ a {
 header {
   position: absolute;
   width: 100%;
-  height: 80px;
 }
 header .parent {
   display: grid;
@@ -119,11 +118,13 @@ header .center-part p {
   left: 0;
   right: 0;
 }
+header .center-part, header .left-part, header .right-part {
+  margin-top: 30px;
+}
 header .center-part p, header .left-part p, header .right-part p {
+  margin: 0;
   display: inline;
   white-space: nowrap;
-  position: relative;
-  top: 60px;
 }
 @media (max-width: 700px) {
   header .center-part p, header .left-part p, header .right-part p {
@@ -149,11 +150,16 @@ footer {
 @media (max-width: 700px) {
   footer {
     padding: 30px;
+    font-size: 10px;
   }
 }
 
 .commit-details {
   font-size: 1rem;
+}
+
+p {
+  font-weight: lighter;
 }
 
 .main-text {
@@ -179,6 +185,7 @@ footer {
 @media (max-width: 600px) {
   .main-text {
     font-size: calc(1.425rem + 2.1vw);
+    margin-top: 30%;
   }
 }
 @media (max-width: 600px) and (min-width: 1200px) {
@@ -188,7 +195,6 @@ footer {
 }
 
 main .first-page {
-  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -196,6 +202,10 @@ main .first-page {
 }
 main .first-page .blog-announcement {
   position: relative;
+  margin-bottom: 50px;
+}
+main .first-page .main-text {
+  margin-bottom: 50px;
 }
 main .second-page {
   height: 100%;
@@ -233,7 +243,7 @@ main .second-page .projects .title-text .inline-text {
 main .second-page .projects .rtoml {
   grid-row: 2/3;
   grid-column: 1/1;
-  background: #B48EAD;
+  background: #5E81AC;
 }
 @media (max-width: 940px) {
   main .second-page .projects .rtoml {
@@ -261,7 +271,7 @@ main .second-page .projects .co-chat {
   grid-column: 3/3;
 }
 main .second-page .projects .co-chat .card {
-  background: #EBCB8B;
+  background: #88C0D0;
   color: black;
 }
 @media (max-width: 940px) {
@@ -329,6 +339,11 @@ main .second-page .card .other-info {
 @media (max-width: 940px) {
   main .second-page .card {
     padding: 20px;
+  }
+}
+@media (max-width: 600px) {
+  main .second-page .card {
+    padding: 15px;
   }
 }
 main .second-page .card h1 {

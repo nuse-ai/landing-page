@@ -1,5 +1,4 @@
 .first-page {
-	height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -7,6 +6,11 @@
 
     .blog-announcement {
     	position: relative;
+        margin-bottom: 50px;
+    }
+
+    .main-text {
+        margin-bottom: 50px;
     }
 
 }
