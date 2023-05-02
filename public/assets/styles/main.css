@@ -207,6 +207,10 @@ main .first-page .blog-announcement {
 main .first-page .main-text {
   margin-bottom: 50px;
 }
+main .first-page-blog {
+  position: relative;
+  top: -50px;
+}
 main .second-page {
   height: 100%;
 }
