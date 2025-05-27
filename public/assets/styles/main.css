@@ -127,7 +127,7 @@ header .center-part p, header .left-part p, header .right-part p {
   white-space: nowrap;
 }
 @media (max-width: 700px) {
-  header .center-part p, header .left-part p, header .right-part p, .intro-para p {
+  header .center-part p, header .left-part p, header .right-part p {
     font-size: 10px;
   }
 }
@@ -358,7 +358,7 @@ main .second-page .card h1 {
     font-size: 2rem;
   }
 }
-main .second-page .card h3{
+main .second-page .card h3 {
   font-size: 1.2rem;
   margin-top: 10px;
 }
@@ -442,7 +442,7 @@ main .blog-post .duration {
   right: 0;
   top: 0;
 }
-main .blog-post .content, .intro-para p {
+main .blog-post .content {
   position: relative;
   font-weight: 100;
   font-size: 1.2em;

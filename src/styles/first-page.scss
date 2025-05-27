@@ -1,8 +1,7 @@
 .first-page {
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
 
     .blog-announcement {
     	position: relative;
@@ -10,7 +9,7 @@
     }
 
     .main-text {
-        margin-bottom: 50px;
+        margin-bottom: 10px;
     }
 
 }
