@@ -29,7 +29,7 @@
     <!-- Google -->
     <meta name="robots" content="noarchive" />
 
-    <title>Debugging proc macros using croc-look | MyBlog</title>
+    <title>Bridging our rust codebase with Web Assembly | MyBlog</title>
     <!-- Fira Code -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -106,45 +106,92 @@
                 ><span class="color-6">MyBlog</span></a
               >
             </p>
-            <p class="date"><span class="color-2">11th August, 2022</span></p>
-            <p class="duration"><span class="color-4">5 min read</span></p>
+            <p class="date"><span class="color-2">23 December, 2023</span></p>
+            <p class="duration"><span class="color-4">10 min read</span></p>
             <p class="heading">
-              <span class="color-7">Debugging proc macros using croc-look</span>
+              <span class="color-7"
+                >Briding our Rust codebase with Web Assembly
+              </span>
             </p>
             <hr />
+
             <p class="content">
-              The terminal solution right now for debugging procedural macros in
-              rust is called
+              The problem arises when we want to create transactions on the
+              browser or a non rust platform. At
               <a
                 class="underline color-4"
-                href="https://github.com/dtolnay/cargo-expand"
-                >cargo-expand</a
+                href="https://github.com/dusk-network"
+                >Dusk Network</a
               >
-              which is a good solution but what if,
+              creating a transaction gives you a unproven transcation in form of
+              raw bytes <code>[u8; LEN]</code> because at Dusk, we use zero
+              knowledge proofs. We can later verify the proof by sending those
+              bytes via a POST request to a prover.
             </p>
-            <ul>
-              <li>
-                You want a declutered, straight to the point view of what your
-                code is generating
-              </li>
-              <li>
-                You want to see the output of your macro as your writing it
-                (live reloading)
-              </li>
-            </ul>
             <p class="content">
-              The reason why I think <code>croc-look</code> is a good solution
-              is that it allows you to think straight in terms of the code your
-              generating.<br />
-              <br />
-              <code>croc-look</code> will help the community better debug proc
-              macros and make them tiny bit easier to make. <br /><br />
-
-              Getting started is as easy as
+              So if we make transaction creation code wasm compatiblie, non rust
+              platforms can use `Wasmer` and load that web assembly and generate
+              unproven transactions.
             </p>
-            <pre><code class="language-rust">cargo install croc-look
+            <h1>How do we start then?</h1>
+            <p class="content">
+              We first look at how we create those transaction in rust, or a
+              generic transaction creation. Lets look at what we do in rust side
+            </p>
+            <pre><code class="language-rust">let spend_proof = self
+    .prover
+    .request_stct_proof(
+        &fee,
+        &crossover,
+        value,
+        blinder,
+        address,
+        stct_signature,
+    )
+    .map_err(Error::from_prover_err)?
+    .to_bytes()
+    .to_vec(); // We send a request to obtain a proof and we later embed it in the transaction
+
+// Some crypto primitives available only to rust targets
+let msg = stake_signature_message(stake.counter, value); 
+let signature = sk.sign(&pk, &msg);
+
+// Some smart contract specific data structures
+let stake = Stake {
+    public_key: pk,
+    signature,
+    value,
+    proof: spend_proof,
+};
+
+// basic rkyv serialization
+let call_data = rkyv::to_bytes::<_, MAX_CALL_SIZE>(&stake)?.to_vec();
+let call =
+    (rusk_abi::STAKE_CONTRACT, String::from(TX_STAKE), call_data);
+
+// constuction of the unproven transaction
+let utx = UnprovenTransaction::new(
+    rng,
+    &self.state,
+    &sender,
+    inputs,
+    outputs,
+    fee,
+    Some((crossover, value, blinder)),
+    Some(call),
+).map_err(Error::from_state_err)?;
 </code></pre>
-            <p class="content">Let's take a look at this</p>
+            <p class="content">
+              One thing to note is that the wasm environment does not have
+              access to a file system or the network so any network requests are
+              needed to be done by the consumer of the web assembly interface
+              and then the response can be passed as a function argument to a
+              web assembly function
+            </p>
+
+            <p class="content">
+              Now we need to rewrite the code above in a way
+            </p>
             <pre><code class="language-rust">
 #[derive(Serialize, Debug, Clone)]
 struct T {}
