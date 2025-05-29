@@ -196,8 +196,7 @@ p {
 
 main .first-page {
   display: flex;
-  align-items: center;
-  flex-direction: row;
+  align-items: flex-start;
 }
 main .first-page .blog-announcement {
   position: relative;
@@ -208,7 +207,7 @@ main .first-page .main-text {
 }
 main .first-page-blog {
   position: relative;
-  top: -50px;
+  top: 20%;
 }
 main .second-page {
   height: 100%;
@@ -262,10 +261,10 @@ main .second-page .projects .turtlebot:hover {
   background-position: 50%;
 }
 main .second-page .projects .turtlebot .card {
-  background: rgba(76, 86, 106, 0.4);
+  background: rgba(76, 86, 106, 0.8);
 }
 main .second-page .projects .turtlebot .card:hover {
-  background: rgba(76, 86, 106, 0.3);
+  background: rgba(76, 86, 106, 0.6);
 }
 main .second-page .projects .octane {
   background-image: url("https://raw.githubusercontent.com/OctaneWeb/OctaneSite/develop/docs/assets/logo.png");
@@ -283,10 +282,10 @@ main .second-page .projects .octane:hover {
   background-position: 0% -15%;
 }
 main .second-page .projects .octane .card {
-  background: rgba(76, 86, 106, 0.6);
+  background: rgba(76, 86, 106, 0.8);
 }
 main .second-page .projects .octane .card:hover {
-  background: rgba(76, 86, 106, 0.3);
+  background: rgba(76, 86, 106, 0.5);
 }
 main .second-page .projects .sanitizer .card .underline:after {
   background-color: #88C0D0;
@@ -299,7 +298,7 @@ main .second-page .projects .iso-rs .card .underline:after {
 }
 main .second-page .card {
   height: 100%;
-  padding: 15px;
+  padding: 20px;
   display: flex;
   border-radius: 20px;
   background: #4C566A;
@@ -366,14 +365,14 @@ main .blog-post pre code {
   background: none;
 }
 main .blog-post video {
-  width: 100%;
+  width: 80%;
 }
 main .blog-post .center {
   text-align: center;
 }
 main .blog-post div {
   position: relative;
-  max-width: 60%;
+  max-width: 70%;
 }
 @media (max-width: 1000px) {
   main .blog-post div {
@@ -419,7 +418,7 @@ main .blog-post .content {
   font-size: 1.2em;
 }
 main .blog-post .content::after {
-  content: ">";
+  content: "";
   position: absolute;
   left: -30px;
   top: 0;
@@ -478,7 +477,7 @@ button {
   content: "";
   position: absolute;
   width: 100%;
-  transform: scaleX(0);
+  transform: scaleX(1);
   height: 1px;
   bottom: 0;
   top: 90%;
@@ -488,7 +487,7 @@ button {
   transition: transform 0.25s ease-out;
 }
 .underline:hover:after {
-  transform: scaleX(1);
+  transform: scaleX(0);
   transform-origin: bottom left;
 }
 

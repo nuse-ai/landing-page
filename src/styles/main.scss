@@ -109,7 +109,7 @@ button {
     content: '';
     position: absolute;
     width: 100%;
-    transform: scaleX(0);
+    transform: scaleX(1);
     height: 1px;
     bottom: 0;
     top: 90%;
@@ -121,7 +121,7 @@ button {
 
   &:hover {
     &:after {
-      transform: scaleX(1);
+      transform: scaleX(0);
       transform-origin: bottom left;
     }
   }

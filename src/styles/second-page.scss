@@ -58,10 +58,10 @@
       }
 
       .card {
-        background: rgba(76, 86, 106, 0.4);
+        background: rgba(76, 86, 106, 0.8);
 
         &:hover {
-          background: rgba(76, 86, 106, 0.3);
+          background: rgba(76, 86, 106, 0.6);
         }
       }
     }
@@ -84,10 +84,10 @@
       }
 
       .card {
-        background: rgba(76, 86, 106, 0.6);
+        background: rgba(76, 86, 106, 0.8);
 
         &:hover {
-          background: rgba(76, 86, 106, 0.3);
+          background: rgba(76, 86, 106, 0.5);
         }
       }
     }
@@ -134,7 +134,7 @@
 
   .card {
     height: 100%;
-    padding: 15px;
+    padding: 20px;
     display: flex;
     border-radius: 20px;
     background: $color-1;

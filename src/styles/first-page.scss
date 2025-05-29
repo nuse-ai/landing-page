@@ -1,7 +1,6 @@
 .first-page {
     display: flex;
-    align-items: center;
-    flex-direction: row;
+    align-items: flex-start;
 
     .blog-announcement {
     	position: relative;
@@ -16,5 +15,5 @@
 
 .first-page-blog {
     position: relative;
-    top: -50px;
+    top: 20%;
 }
