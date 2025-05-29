@@ -209,6 +209,12 @@ main .first-page-blog {
   position: relative;
   top: 20%;
 }
+main .first-page-blog ul {
+  list-style-type: "=>  ";
+}
+main .first-page-blog ul li {
+  margin-bottom: 20px;
+}
 main .second-page {
   height: 100%;
 }
