@@ -316,9 +316,6 @@ main .second-page .card .other-info {
     padding: 15px;
   }
 }
-main .second-page .card span a {
-  color: #88C0D0;
-}
 main .second-page .card h1 {
   font-weight: 900;
   font-size: calc(1.255rem + 0.06vw);
@@ -365,7 +362,7 @@ main .blog-post pre code {
   background: none;
 }
 main .blog-post video {
-  width: 80%;
+  width: 60%;
 }
 main .blog-post .center {
   text-align: center;
