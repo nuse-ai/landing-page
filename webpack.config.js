@@ -122,6 +122,14 @@ module.exports = {
           },
         ],
       },
+      {
+        // add support for svg
+        test: /\.svg/,
+        use: {
+          loader: "svg-url-loader",
+          options: {},
+        }
+      }
     ],
   },
   plugins: [

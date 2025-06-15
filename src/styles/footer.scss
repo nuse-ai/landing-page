@@ -1,7 +1,7 @@
 $bp-1: 700px;
 
 footer {
-	background: $color-1;
+	background: white;
 	padding: 50px;
 
 	@include media-query($bp-1) {

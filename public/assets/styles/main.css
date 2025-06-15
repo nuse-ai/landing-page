@@ -1,3 +1,11 @@
+.dark-blue {
+  background-color: #F4F7FF;
+}
+
+.blue {
+  color: #3676F2;
+}
+
 html {
   height: 100%;
   box-sizing: border-box;
@@ -15,8 +23,7 @@ body {
   padding: 0;
   height: 100%;
   overflow-x: hidden;
-  font-family: "Fira Code", monospace !important;
-  color: #fff;
+  font-family: "Reddit Sans";
 }
 
 h1,
@@ -24,6 +31,7 @@ h2,
 h3,
 h4,
 h5 {
+  font-family: "Playfair Display";
   margin: 0;
   padding: 0;
 }
@@ -42,62 +50,11 @@ a {
   color: inherit;
 }
 
-.color-1 {
-  color: #4C566A;
-}
-
-.color-2 {
-  color: #5E81AC;
-}
-
-.color-3 {
-  color: #81A1C1;
-}
-
-.color-4 {
-  color: #88C0D0;
-}
-
-.color-5 {
-  color: #EBCB8B;
-}
-
-.color-6 {
-  color: #B48EAD;
-}
-
-.color-7 {
-  color: #22E0DC;
-}
-
-.color-8 {
-  color: #A3BE8C;
-}
-
-.bg {
-  background: #2E3440;
-}
-
-.container-lg {
-  margin: 0 auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  width: 100%;
-}
-@media (min-width: 1200px) {
-  .container-lg {
-    max-width: 1500px;
-  }
-}
-@media (min-width: 1800px) {
-  .container-lg {
-    max-width: 1600px;
-  }
-}
-
 header {
   position: absolute;
   width: 100%;
+  color: black;
+  top: 0;
 }
 header .parent {
   display: grid;
@@ -119,7 +76,7 @@ header .center-part p {
   right: 0;
 }
 header .center-part, header .left-part, header .right-part {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 header .center-part p, header .left-part p, header .right-part p {
   margin: 0;
@@ -144,7 +101,7 @@ header:after {
 }
 
 footer {
-  background: #4C566A;
+  background: white;
   padding: 50px;
 }
 @media (max-width: 700px) {
@@ -158,317 +115,183 @@ footer {
   font-size: 1rem;
 }
 
-p {
-  font-weight: lighter;
+p, button {
+  font-family: "Reddit Sans";
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-.main-text {
+.main-text, h1 {
+  font-family: "Playfair Display";
+  font-optical-sizing: auto;
   white-space: nowrap;
-  font-size: calc(1.775rem + 6.3vw);
-  font-weight: 900;
+  font-weight: bold;
+  font-size: calc(1.575rem + 3.9vw);
 }
 @media (min-width: 1200px) {
-  .main-text {
-    font-size: 6.5rem;
+  .main-text, h1 {
+    font-size: 4.5rem;
   }
 }
 @media (max-width: 940px) {
-  .main-text {
+  .main-text, h1 {
     font-size: calc(1.625rem + 4.5vw);
   }
 }
 @media (max-width: 940px) and (min-width: 1200px) {
-  .main-text {
+  .main-text, h1 {
     font-size: 5rem;
   }
 }
 @media (max-width: 600px) {
-  .main-text {
+  .main-text, h1 {
     font-size: calc(1.425rem + 2.1vw);
     margin-top: 30%;
   }
 }
 @media (max-width: 600px) and (min-width: 1200px) {
-  .main-text {
+  .main-text, h1 {
     font-size: 3rem;
   }
 }
 
-main .first-page {
-  display: flex;
-  align-items: flex-start;
-}
-main .first-page .blog-announcement {
-  position: relative;
-  margin-bottom: 50px;
-}
-main .first-page .main-text {
-  margin-bottom: 10px;
-}
-main .first-page-blog {
-  position: relative;
-  top: 20%;
-}
-main .first-page-blog ul {
-  list-style-type: "=>  ";
-}
-main .first-page-blog ul li {
-  margin-bottom: 20px;
-}
-main .second-page {
-  height: 100%;
-}
-main .second-page .projects {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  grid-auto-rows: minmax(min-content, max-content);
-}
-@media (max-width: 940px) {
-  main .second-page .projects {
-    grid-template-rows: auto 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
-  }
-}
-main .second-page .projects .title-text .inline-text {
-  margin: 0;
-  padding: 0;
-  display: inline !important;
-}
-@media (max-width: 940px) {
-  main .second-page .projects .title-text {
-    grid-row: 1;
-    width: 100%;
-    grid-column: 1;
-  }
-  main .second-page .projects .title-text .inline-text {
-    display: block !important;
-  }
-  main .second-page .projects .title-text .inline-text br {
-    display: none;
-  }
-}
-main .second-page .projects .rtoml {
-  background: #5E81AC;
-}
-main .second-page .projects .turtlebot {
-  background-image: url("https://i.ibb.co/7JmvBCwc/IMG-3799.jpg");
-  background-size: cover;
-  background-position: 20% 45%;
-  transition: 0.2s all ease;
-  -webkit-transition: 0.2s all ease;
-  -moz-transition: 0.2s all ease;
-  -ms-transition: 0.2s all ease;
-  -o-transition: 0.2s all ease;
-  border-radius: 20px;
-}
-main .second-page .projects .turtlebot:hover {
-  background-position: 50%;
-}
-main .second-page .projects .turtlebot .card {
-  background: rgba(76, 86, 106, 0.8);
-}
-main .second-page .projects .turtlebot .card:hover {
-  background: rgba(76, 86, 106, 0.6);
-}
-main .second-page .projects .octane {
-  background-image: url("https://raw.githubusercontent.com/OctaneWeb/OctaneSite/develop/docs/assets/logo.png");
-  background-size: cover;
-  border-radius: 20px;
-  background-position: 0% -30%;
-  background-repeat: no-repeat;
-  transition: 0.2s all ease;
-  -webkit-transition: 0.2s all ease;
-  -moz-transition: 0.2s all ease;
-  -ms-transition: 0.2s all ease;
-  -o-transition: 0.2s all ease;
-}
-main .second-page .projects .octane:hover {
-  background-position: 0% -15%;
-}
-main .second-page .projects .octane .card {
-  background: rgba(76, 86, 106, 0.8);
-}
-main .second-page .projects .octane .card:hover {
-  background: rgba(76, 86, 106, 0.5);
-}
-main .second-page .projects .sanitizer .card .underline:after {
-  background-color: #88C0D0;
-}
-main .second-page .projects .croc-look .card .underline:after {
-  background-color: #88C0D0;
-}
-main .second-page .projects .iso-rs .card .underline:after {
-  background-color: #88C0D0;
-}
-main .second-page .card {
-  height: 100%;
-  padding: 20px;
-  display: flex;
-  border-radius: 20px;
-  background: #4C566A;
-}
-main .second-page .card .other-info {
-  font-size: 0.8em;
-}
-@media (max-width: 940px) {
-  main .second-page .card {
-    padding: 20px;
-  }
-}
-@media (max-width: 600px) {
-  main .second-page .card {
-    padding: 15px;
-  }
-}
-main .second-page .card h1 {
-  font-weight: 900;
-  font-size: calc(1.255rem + 0.06vw);
+h2 {
+  font-size: calc(1.475rem + 2.7vw);
+  font-weight: lighter;
 }
 @media (min-width: 1200px) {
-  main .second-page .card h1 {
-    font-size: 1.3rem;
-  }
-}
-main .second-page .card h3 {
-  font-size: 0.8rem;
-  margin-top: 10px;
-}
-main .second-page .card span {
-  font-size: 12px;
-}
-main .second-page .card button {
-  margin-top: 10px;
-}
-main .blog-post {
-  position: relative;
-  top: 80px;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-main .blog-post ul {
-  list-style-type: "-> ";
-}
-main .blog-post ul li {
-  margin-bottom: 10px;
-}
-main .blog-post code {
-  background: #2c3e50;
-  padding: 3px;
-}
-main .blog-post pre {
-  background: #2c3e50;
-  padding-left: 2px;
-}
-main .blog-post pre code {
-  background: none;
-}
-main .blog-post video {
-  width: 60%;
-}
-main .blog-post .center {
-  text-align: center;
-}
-main .blog-post div {
-  position: relative;
-  max-width: 70%;
-}
-@media (max-width: 1000px) {
-  main .blog-post div {
-    max-width: 80%;
-  }
-}
-@media (max-width: 600px) {
-  main .blog-post div {
-    max-width: 100%;
-  }
-}
-main .blog-post .heading {
-  max-width: 90%;
-  font-size: calc(1.375rem + 1.5vw);
-  font-weight: 900;
-}
-@media (min-width: 1200px) {
-  main .blog-post .heading {
-    font-size: 2.5rem;
+  h2 {
+    font-size: 3.5rem;
   }
 }
 @media (max-width: 940px) {
-  main .blog-post .heading {
-    font-size: calc(1.275rem + 0.3vw);
+  h2 {
+    font-size: calc(1.425rem + 2.1vw);
   }
 }
 @media (max-width: 940px) and (min-width: 1200px) {
-  main .blog-post .heading {
-    font-size: 1.5rem;
+  h2 {
+    font-size: 3rem;
   }
 }
-main .blog-post .date {
-  margin-right: auto;
+@media (max-width: 600px) {
+  h2 {
+    font-size: calc(1.325rem + 0.9vw);
+    margin-top: 30%;
+  }
 }
-main .blog-post .duration {
-  position: absolute;
-  right: 0;
-  top: 0;
+@media (max-width: 600px) and (min-width: 1200px) {
+  h2 {
+    font-size: 2rem;
+  }
 }
-main .blog-post .content {
-  position: relative;
-  font-weight: 100;
-  font-size: 1.2em;
-}
-main .blog-post .content::after {
-  content: "";
-  position: absolute;
-  left: -30px;
-  top: 0;
+
+main {
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
   width: 100%;
-  height: 1px;
-  background: #2c3e50;
 }
-main .blog-post .footer-blog {
-  max-width: 100%;
-  width: 100%;
+@media (min-width: 1200px) {
+  main {
+    max-width: 1500px;
+  }
+}
+@media (min-width: 1800px) {
+  main {
+    max-width: 1600px;
+  }
+}
+main .first-page {
+  margin-top: 65px;
+}
+main .first-page .content {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+main .first-page .content .blog-announcement {
   position: relative;
-  margin-top: 50px;
   margin-bottom: 50px;
 }
-main .third-page {
-  padding-top: 10px;
-  padding-bottom: 10px;
+main .first-page .content .main-text {
+  margin-bottom: 10px;
+}
+main .small-text {
+  display: block;
+  margin: 30px auto;
+  max-width: 60%;
+}
+main .page-two {
+  display: grid;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+main .page-two h2 {
+  margin-bottom: 15px;
+}
+main .page-two div ul {
+  margin-top: 50px;
+  padding-left: 20px;
+}
+main .page-two div li {
+  list-style-image: url("data:image/svg+xml,%3csvg width='12' height='15' viewBox='0 0 12 15' fill='none' xmlns='http://www.w3.org/2000/svg'%3e %3cpath fill-rule='evenodd' clip-rule='evenodd' d='M11.82 4.24732L11.7267 4.08065C11.6063 3.87911 11.4365 3.7116 11.2333 3.59398L6.76 1.01398C6.55746 0.896484 6.32753 0.834398 6.09333 0.833984H5.9C5.6658 0.834398 5.43586 0.896484 5.23333 1.01398L0.76 3.60065C0.55798 3.71749 0.390173 3.8853 0.273333 4.08732L0.18 4.25398C0.0625 4.45654 0.000413333 4.68648 0 4.92065V10.0873C0.000413333 10.3215 0.0625 10.5514 0.18 10.754L0.273333 10.9206C0.393193 11.1203 0.560326 11.2874 0.76 11.4073L5.24 13.9873C5.44153 14.1072 5.67213 14.1695 5.90666 14.1673H6.09333C6.32753 14.1669 6.55746 14.1048 6.76 13.9873L11.2333 11.4006C11.4373 11.2864 11.6058 11.118 11.72 10.914L11.82 10.7473C11.9361 10.5442 11.9981 10.3146 12 10.0806V4.91398C11.9996 4.67981 11.9375 4.44988 11.82 4.24732ZM5.9 2.16732H6.09333L10 4.42065L6 6.72732L2 4.42065L5.9 2.16732ZM6.66666 12.5006L10.5667 10.2473L10.6667 10.0806V5.57398L6.66666 7.88732V12.5006Z' fill='black'/%3e %3c/svg%3e");
+  margin-top: 20px;
+}
+main .page-two button {
+  margin-top: 20px;
+}
+main .page-three {
   text-align: center;
+}
+main .page-three button {
+  margin-left: 10px;
+}
+main .page-four {
+  padding-right: 50px;
+  padding-left: 50px;
+  border-radius: 20px;
+  background-color: #F4F7FF;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+main .page-four .content-flex {
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.store-button {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.content-center {
+  display: flex;
+  justify-content: center;
+}
+
+.big-img {
+  width: 100%;
+  margin-top: 50px;
 }
 
 button {
-  background: transparent;
-  border: 1px solid #B48EAD;
+  border: none;
   border-radius: 20px;
-  font-family: "Fira Code";
-  padding: 10px;
+  padding: 14px;
   cursor: pointer;
   font-weight: bold;
   color: white;
-  background: #B48EAD;
+  background: #3676F2;
   outline: none;
 }
 
-.commit {
-  display: inline;
-  font-weight: 900;
-  background: linear-gradient(to right, #FFF 20%, #88C0D0 40%, #88C0D0 60%, #FFF 80%);
-  background-size: 400%;
-  color: transparent;
-  -webkit-background-clip: text;
-  animation: shine 5s linear infinite;
-  -webkit-animation: shine 5s linear infinite;
-}
-@keyframes shine {
-  to {
-    background-position: 400%;
-  }
+.button-fade {
+  background: #EBF1FE;
+  color: #3676F2;
 }
 
 .underline {

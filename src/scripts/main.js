@@ -41,25 +41,3 @@ anime({
     return i * 1000;
   },
 })
-
-var span = document.getElementById('span');
-
-function time() {
-  span.textContent = 
-     formatAMPM(new Date())
-}
-
-setInterval(time, 1000);
-
-const formatAMPM = (date) => {
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-
-  hours %= 12;
-  hours = hours || 12;    
-  minutes = minutes < 10 ? `0${minutes}` : minutes;
-
-  const strTime = `${hours}:${minutes}`;
-
-  return strTime;
-};

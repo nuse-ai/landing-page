@@ -3,6 +3,8 @@ $bp-1: 700px;
 header {
 	position: absolute;
 	width: 100%;
+	color: black;
+	top: 0;
 
 	.parent {
 		display: grid;
@@ -26,7 +28,7 @@ header {
 	}
 
 	.center-part, .left-part, .right-part {
-		margin-top: 30px;
+		margin-top: 15px;
 
 		p {
 			margin: 0;

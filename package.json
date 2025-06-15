@@ -1,10 +1,10 @@
 {
   "name": "live-reload-vanilla-website-template",
   "version": "1.0.0",
-  "description": "Template to build a website without a front-end framework. Includes transpilation of ES6+ JavaScript and Sass support",
+  "description": "NuseAI landing page",
   "main": "main.js",
-  "author": "Esau Silva",
-  "license": "MIT",
+  "author": "Daksh Upadhyay",
+  "license": "Propreitary",
   "scripts": {
     "dev:assets": "webpack --watch",
     "dev:start": "live-server --open=./public/ --host=127.0.0.1 --watch=./public/",
@@ -36,18 +36,12 @@
   "bugs": {
     "url": "https://github.com/esausilva/live-reload-vanilla-website-template/issues"
   },
-  "keywords": [
-    "JavaScript",
-    "Webpack",
-    "ES6+",
-    "live reload",
-    "Sass"
-  ],
   "dependencies": {
     "animate.css": "^4.1.1",
     "animejs": "^3.2.1",
     "express": "^4.18.1",
     "rfs": "^9.0.6",
-    "smooth-scrollbar": "^8.7.4"
+    "smooth-scrollbar": "^8.7.4",
+    "svg-url-loader": "^8.0.0"
   }
 }

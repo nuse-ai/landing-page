@@ -11,8 +11,4 @@ app.get("*", function (req, res) {
   res.sendFile(path.join(DIST_DIR, "index.html"));
 });
 
-app.get("/blog", function (req, res) {
-  res.sendFile(path.join(DIST_DIR, "blog/index.html"));
-});
-
 app.listen(PORT);

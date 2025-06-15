@@ -1,26 +1,5 @@
-@import 'reset.scss';
 @import 'colors.scss';
-
-.bg {
-  background: $background-color;
-}
-
-.container-lg {
-  margin: 0 auto;
-  padding-right: 1rem;
-  padding-left: 1rem;
-  width: 100%;
-
-  @include media-query-min-width(1200px) {
-    max-width: 1500px;
-  }
-
-  @include media-query-min-width(1800px) {
-    max-width: 1600px;
-  }
-}
-
-
+@import 'reset.scss';
 
 $grid-bp: 940px;
 $main-text-bp: 600px;
@@ -33,14 +12,19 @@ $main-text-bp: 600px;
   @include font-size(1rem);
 }
 
-p {
-  font-weight: lighter;
+p, button {
+  font-family: "Reddit Sans";
+  font-optical-sizing: auto;
+  font-style: normal;
 }
 
-.main-text {
+.main-text, h1 {
+  font-family: "Playfair Display";
+  font-optical-sizing: auto;
   white-space: nowrap;
+  font-weight: bold;
 
-  @include font-size(6.5rem);
+  @include font-size(4.5rem);
 
   @include media-query($grid-bp) {
     @include font-size(5rem);
@@ -50,54 +34,94 @@ p {
     @include font-size(3rem);
     margin-top: 30%;
   }
+}
 
-  font-weight: 900;
+h2 {
+  @include font-size(3.5rem);
+
+  font-weight: lighter;
+
+  @include media-query($grid-bp) {
+    @include font-size(3rem);
+  }
+
+  @include media-query($main-text-bp) {
+    @include font-size(2rem);
+    margin-top: 30%;
+  }
 }
 
 main {
+  margin: 0 auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  width: 100%;
+
+  @include media-query-min-width(1200px) {
+    max-width: 1500px;
+  }
+
+  @include media-query-min-width(1800px) {
+    max-width: 1600px;
+  }
 
   @import 'first-page.scss';
   @import 'second-page.scss';
-  @import 'blog-post.scss';
 
-  .third-page {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  .page-three {
     text-align: center;
-  }
-}
 
-button {
-  background: transparent;
-  border: 1px solid $color-6;
-  border-radius: 20px;
-  font-family: "Fira Code";
-  padding: 10px;
-  cursor: pointer;
-  font-weight: bold;
-  color: white;
-  background: $color-6;
-  outline: none;
-}
-
-.commit {
-  display: inline;
-  font-weight: 900;
-  background: linear-gradient(to right, #FFF 20%, $color-4 40%, $color-4 60%, #FFF 80%);
-  background-size: 400%;
-
-  color: transparent;
-  -webkit-background-clip: text;
-
-  animation: shine 5s linear infinite;
-  -webkit-animation: shine 5s linear infinite;
-
-  @keyframes shine {
-    to {
-      background-position: 400%;
+    button {
+      margin-left: 10px;
     }
   }
 
+  .page-four {
+    padding-right: 50px;
+    padding-left: 50px;
+    border-radius: 20px;
+
+    .content-flex {
+      display: flex;
+      align-items: center;
+      margin-top: 30px;
+    }
+
+    background-color: $white;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.store-button {
+  height: 50px;
+  margin-right: 15px;
+}
+
+.content-center {
+    display: flex;
+    justify-content: center;
+}
+
+.big-img {
+  width: 100%;
+  margin-top: 50px;
+}
+
+button {
+  border: none;
+  border-radius: 20px;
+  padding: 14px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  background: $blue-300;
+  outline: none;
+}
+
+.button-fade {
+  background: $blue-50;
+  color: $blue-300;
 }
 
 .underline {
