@@ -264,6 +264,11 @@ main .page-three {
   margin-top: 50px;
   text-align: center;
 }
+@media (max-width: 600px) {
+  main .page-three {
+    margin-top: 10px;
+  }
+}
 main .page-three button {
   margin-left: 10px;
 }
@@ -273,6 +278,8 @@ main .page-three img {
 main .page-four {
   padding: 50px;
   border-radius: 20px;
+  padding-top: 0px;
+  padding-bottom: 0px;
   background-color: #F4F7FF;
 }
 main .page-four .content-flex {
@@ -283,6 +290,8 @@ main .page-four .content-flex {
 @media (max-width: 600px) {
   main .page-four {
     padding: 20px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 }
 
