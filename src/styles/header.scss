@@ -9,7 +9,7 @@ header {
 	.parent {
 		display: grid;
 		height: 100%;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: 1fr 1fr;
 		margin: 0 auto;
 	}
 

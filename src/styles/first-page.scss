@@ -15,10 +15,25 @@
       margin-bottom: 10px;
     }
   }
+
+  .main-text {
+    margin-top: 30px;
+  }
+
+  .content-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .small-text {
     display: block;
     margin: 30px auto;
     max-width: 60%;
+
+  @include media-query($grid-bp) {
+    width: 100%;
+    max-width: 100%;
+  }
 }
