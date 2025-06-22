@@ -12,7 +12,7 @@ $main-text-bp: 600px;
   @include font-size(1rem);
 }
 
-p, button {
+p, button, h4, input {
   font-family: "Reddit Sans";
   font-optical-sizing: auto;
   font-style: normal;
@@ -47,6 +47,12 @@ h2 {
   @include media-query($main-text-bp) {
     @include font-size(2rem);
   }
+}
+
+input {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 main {

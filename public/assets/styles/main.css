@@ -104,18 +104,57 @@ footer {
   background: white;
   padding: 50px;
 }
-@media (max-width: 700px) {
+@media (max-width: 900px) {
   footer {
     padding: 30px;
     font-size: 10px;
   }
+}
+footer .grid-footer {
+  border-radius: 10px;
+  border: 1px solid black;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 900px) {
+  footer .grid-footer {
+    padding: 30px;
+    font-size: 10px;
+  }
+}
+@media (max-width: 600px) {
+  footer .grid-footer {
+    display: block;
+  }
+}
+footer .subscribe input {
+  margin-right: 10px;
+}
+@media (max-width: 600px) {
+  footer .subscribe input {
+    width: 100%;
+  }
+}
+footer .subscribe button {
+  margin-top: 2px;
+}
+footer .nav-bottom {
+  margin-top: 40px;
+}
+footer .nav-bottom span {
+  margin-right: 20px;
+}
+footer .nav-bottom div {
+  display: inline;
+  float: right;
 }
 
 .commit-details {
   font-size: 1rem;
 }
 
-p, button {
+p, button, h4, input {
   font-family: "Reddit Sans";
   font-optical-sizing: auto;
   font-style: normal;
@@ -182,6 +221,12 @@ h2 {
   h2 {
     font-size: 2rem;
   }
+}
+
+input {
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
 }
 
 main {
