@@ -125,7 +125,16 @@ footer .grid-footer {
 }
 @media (max-width: 600px) {
   footer .grid-footer {
-    display: block;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+  footer .grid-footer .logo-section {
+    display: none;
+  }
+  footer .grid-footer .subscribe {
+    grid-column: 1/-1;
+    grid-row: 2;
   }
 }
 footer .subscribe input {

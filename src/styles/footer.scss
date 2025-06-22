@@ -21,8 +21,21 @@ footer {
 			font-size: 10px;
 		}
 
+
 		@include media-query(600px) {
-			display: block;
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+
+			.logo-section {
+				display: none;
+			}
+
+			.subscribe {
+				grid-column: 1 / -1;
+				grid-row: 2;
+			}
+
 		}
 	}
 
